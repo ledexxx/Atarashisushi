@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from './Menu'; // Ajusta la ruta según la estructura de tu proyecto
+import Menu from './Menu'; 
 
 function App() {
   return (
