@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Search } from '@mui/icons-material';
-import { Restaurant, LocalDining, ShoppingBasket, EmojiFoodBeverage, Cake, Liquor } from '@mui/icons-material'; 
+import { Restaurant, LocalDining, ShoppingBasket, EmojiFoodBeverage, Cake, Liquor} from '@mui/icons-material'; 
 import './App.css';
 import Logo from './logo';
 
