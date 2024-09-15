@@ -1,21 +1,56 @@
 import React from 'react';
 import { Search } from '@mui/icons-material';
-import { Restaurant, LocalDining } from '@mui/icons-material'; 
+import { Restaurant, LocalDining, ShoppingBasket, LunchDining, EmojiFoodBeverage, Cake, Liquor } from '@mui/icons-material'; 
 import './App.css';
 
-// Este es el componente del menú, donde vamos a mostrar las categorías y los productos.
 const Menu = () => {
-  
-  // Estas son las categorías del menú. Aquí estamos metiendo las categorías con su ícono, pana.
   const categories = [
-    { name: 'Entrantes', icon: <Restaurant /> },
-    { name: 'Ensalada', icon: <LocalDining /> },
+    { name: 'Ensaladas', icon: <LocalDining /> },
     { name: 'Sushi Rolls', icon: <Restaurant /> },
-    // categorías
+    { name: 'Sushiburguers', icon: <LunchDining /> },
+    { name: 'Postres', icon: <Cake /> },
+    { name: 'Bebidas', icon: <EmojiFoodBeverage /> },
+    { name: 'Licores', icon: <Liquor /> },
   ];
 
-  // Estos son los productos del menú, cada uno con su nombre, descripción, precio y foto. Pura vaina buena.
   const products = [
+
+    { 
+      "name": "Ensalada César", 
+      "description": "Lechuga romana, pollo a la parrilla, crotones y aderezo César", 
+      "price": "$8.500", 
+      "image": "https://www.gourmet.cl/wp-content/uploads/2016/09/Ensalada_C%C3%A9sar-web.jpg" 
+  },
+  { 
+      "name": "Ensalada Caprese", 
+      "description": "Tomate, mozzarella fresca, albahaca y aceite de oliva", 
+      "price": "$9.200", 
+      "image": "https://i.blogs.es/2d572b/caprese/1366_2000.jpg" 
+  },
+  { 
+      "name": "Ensalada Griega", 
+      "description": "Pepino, tomate, aceitunas, cebolla roja y queso feta", 
+      "price": "$7.900", 
+      "image": "https://images.getrecipekit.com/20211227205902-ensalada-20griega.jpg?width=650&quality=90&" 
+  },
+  { 
+      "name": "Ensalada de Quinoa", 
+      "description": "Quinoa, aguacate, espinacas, y nueces", 
+      "price": "$10.000", 
+      "image": "https://danzadefogones.com/wp-content/uploads/2024/08/ensalada-de-quinoa-facil.jpg" 
+  },
+  { 
+      "name": "Ensalada Waldorf", 
+      "description": "Manzana, apio, nueces y mayonesa ligera", 
+      "price": "$11.300", 
+      "image": "https://www.gourmet.cl/wp-content/uploads/2023/11/WALDORF.jpg" 
+  },
+  { 
+      "name": "Ensalada de Atún", 
+      "description": "Atún, huevo duro, tomate cherry y lechuga", 
+      "price": "$9.800", 
+      "image": "https://www.gourmet.cl/wp-content/uploads/2021/10/ensalada-de-at%C3%BAn-internet-1.jpg" 
+  },
     { 
       name: 'Sushi California', 
       description: 'Salmón, aguacate, y queso crema', 
@@ -70,11 +105,51 @@ const Menu = () => {
       price: '$16.500', 
       image: 'https://howdaily.com/wp-content/uploads/2019/05/volcano-sushi-roll-640x960.jpg?x67400' 
     }
+     // Postres
+    ,{ 
+      name: 'Tiramisú', 
+      description: 'Postre italiano con mascarpone, café y cacao', 
+      price: '$6.500', 
+      image: 'https://www.flavoursholidays.co.uk/wp-content/uploads/2020/07/Tiramisu.jpg' 
+    },
+    { 
+      name: 'Cheesecake de Frutos Rojos', 
+      description: 'Pastel de queso con una base de galleta y cobertura de frutos rojos', 
+      price: '$7.200', 
+      image: 'https://mandolina.co/wp-content/uploads/2024/04/Cheesecake-de-Frutos-Rojos-1080x550-1.jpg' 
+    },
+    // Bebidas
+    { 
+      name: 'Té Matcha', 
+      description: 'Té verde en polvo tradicional japonés', 
+      price: '$4.500', 
+      image: 'https://media.vogue.mx/photos/5c06fe336d624e5173a1a972/1:1/w_1800,h_1800,c_limit/beneficios_del_te_matcha_1185.jpg' 
+    },
+    { 
+      name: 'Limonada de Coco', 
+      description: 'Bebida refrescante a base de limón y leche de coco', 
+      price: '$3.800', 
+      image: 'https://mejorconsalud.as.com/wp-content/uploads/2020/12/limonada-coco.jpg' 
+    },
+    // Licores
+    { 
+      name: 'Sake', 
+      description: 'Bebida alcohólica japonesa elaborada a partir de arroz fermentado', 
+      price: '$12.000', 
+      image: 'https://www.justonecookbook.com/wp-content/uploads/2019/09/Sake-II.jpg' 
+    },
+    { 
+      name: 'Mojito', 
+      description: 'Cóctel cubano con ron, menta y lima', 
+      price: '$9.500', 
+      image: 'https://cookieandkate.com/images/2020/08/best-mojito-recipe-2.jpg' 
+    }
+  
   ];
   
   return (
+    
     <div className="container mx-auto px-4">
-      {/* Campo de búsqueda pa' los panas que quieren buscar su sushi fino. */}
       <div className="flex justify-center mt-10">
         <div className="relative w-full sm:w-3/4 lg:w-1/2">
           <input
@@ -82,12 +157,10 @@ const Menu = () => {
             placeholder="Buscar productos por nombre"
             className="w-full p-2 border border-gray-300 rounded-full focus:outline-none"
           />
-          {/* Icono de búsqueda estilo material, pa' que se vea pro. */}
           <Search className="absolute right-4 top-3 text-gray-500" />
         </div>
       </div>
-
-      {/* Aquí mostramos las categorías, bien chévere pa' que los usuarios sepan qué pedir. */}
+      {/* Aquí mostramos las categorías*/}
       <div className="flex justify-center my-6">
         {categories.map((category, index) => (
           <div key={index} className="mx-3 text-center">
@@ -98,18 +171,23 @@ const Menu = () => {
           </div>
         ))}
       </div>
-
-      {/* Grid de productos responsive, se adapta como un pana a todas las pantallas. */}
+        {/* Grid de productos responsive*/}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {products.map((product, index) => (
           <div key={index} className="p-4 border rounded-lg">
-            {/* Mostrando cada sushi con su foto, descripción y precio, no hay más na' */}
             <div className="flex items-center">
               <img src={product.image} alt={product.name} className="w-16 h-16 object-cover mr-4 rounded-lg" />
               <div>
                 <h2 className="text-xl font-semibold">{product.name}</h2>
                 <p className="text-gray-500">{product.description}</p>
-                <p className="text-orange-500 font-bold">{product.price}</p>
+                
+                {/* Contenedor para el precio */}
+                <div className="flex items-center mt-2">
+                  <ShoppingBasket className="text-orange-500 mr-2" />
+                  <span className="bg-orange-100 text-orange-500 font-bold py-1 px-3 rounded-lg">
+                    {product.price}
+                  </span>
+                </div>
               </div>
             </div>
           </div>
