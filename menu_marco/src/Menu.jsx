@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Search } from '@mui/icons-material';
 import { Restaurant, LocalDining, ShoppingBasket, EmojiFoodBeverage, Cake, Liquor } from '@mui/icons-material'; 
 import './App.css';
+import Logo from './logo';
 
 const Menu = () => {
   const categories = [
@@ -226,7 +227,9 @@ const Menu = () => {
   };
 
   return (
+    <div><Logo/> </div>,
     <div className="container mx-auto px-4">
+     
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <CategorySelector categories={categories} selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory} />
       {renderProducts()}
