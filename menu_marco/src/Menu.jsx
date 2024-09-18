@@ -239,22 +239,27 @@ const Menu = () => {
 
 // Componente para mostrar el producto
 const ProductCard = ({ product }) => (
-  <div className="p-4 border rounded-lg">
-    <div className="flex items-center">
-      <img src={product.image} alt={product.name} className="w-16 h-16 object-cover mr-4 rounded-lg" />
-      <div>
-        <h2 className="text-xl font-semibold">{product.name}</h2>
-        <p className="text-gray-500">{product.description}</p>
-        <div className="flex items-center mt-2">
-          <ShoppingBasket className="text-orange-500 mr-2" />
-          <span className="bg-orange-100 text-orange-500 font-bold py-1 px-3 rounded-lg">
-            {product.price}
-          </span>
-        </div>
+  <div className="flex items-center bg-white rounded-xl shadow-md overflow-hidden w-full">
+    {/* Imagen a la izquierda */}
+    <div className="w-1/3">
+      <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+    </div>
+    
+    {/* Contenido de texto a la derecha */}
+    <div className="w-2/3 p-6">
+      <h2 className="text-xl font-bold text-gray-900">{product.name}</h2>
+      <p className="text-gray-500">{product.description}</p>
+      <div className="flex items-center mt-4">
+        <ShoppingBasket className="text-orange-500 mr-2" />
+        <span className="bg-orange-100 text-orange-500 font-bold py-1 px-3 rounded-lg">
+          {product.price}
+        </span>
       </div>
     </div>
   </div>
 );
+
+
 
 // Componente de barra de búsqueda
 const SearchBar = ({ searchTerm, setSearchTerm }) => (
@@ -282,7 +287,8 @@ const CategorySelector = ({ categories, selectedCategory, onSelectCategory }) =>
           className="text-center cursor-pointer" 
           onClick={() => onSelectCategory(category.name)}
         >
-          <div className={`rounded-full p-4 mb-2 ${selectedCategory === category.name ? 'bg-orange-200' : 'bg-gray-200'}`}>
+        
+          <div className={`rounded-full p-4 mb-2 ${selectedCategory === category.name ? 'bg-[#ffa200]' : 'bg-[#8b7245]'}`}>
             {category.icon}
           </div>
           <p>{category.name}</p>
