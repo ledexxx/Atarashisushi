@@ -247,8 +247,8 @@ const ProductCard = ({ product }) => (
     
     {/* Contenido de texto a la derecha */}
     <div className="w-2/3 p-6">
-      <h2 className="text-xl font-bold text-gray-900">{product.name}</h2>
-      <p className="text-gray-500">{product.description}</p>
+      <h2 className="text-xl text-left font-bold text-gray-900">{product.name}</h2>
+      <p className="text-gray-500 text-left">{product.description}</p>
       <div className="flex items-center mt-4">
         <ShoppingBasket className="text-orange-500 mr-2" />
         <span className="bg-orange-100 text-orange-500 font-bold py-1 px-3 rounded-lg">
