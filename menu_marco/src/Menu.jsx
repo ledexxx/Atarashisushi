@@ -239,7 +239,7 @@ const Menu = () => {
 
 // Componente para mostrar el producto
 const ProductCard = ({ product }) => (
-  <div className="flex items-center bg-white rounded-xl shadow-md overflow-hidden w-full">
+  <div className="flex items-center bg-[#0000] border-2 border-red-900 rounded-xl shadow-md overflow-hidden w-full">
     {/* Imagen a la izquierda */}
     <div className="w-1/3">
       <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
@@ -248,10 +248,10 @@ const ProductCard = ({ product }) => (
     {/* Contenido de texto a la derecha */}
     <div className="w-2/3 p-6">
       <h2 className="text-xl text-left font-bold text-gray-900">{product.name}</h2>
-      <p className="text-gray-500 text-left">{product.description}</p>
+      <p className="text-white text-left">{product.description}</p>
       <div className="flex items-center mt-4">
-        <ShoppingBasket className="text-orange-500 mr-2" />
-        <span className="bg-orange-100 text-orange-500 font-bold py-1 px-3 rounded-lg">
+        <ShoppingBasket className="text-[#591f2a] mr-2" />
+        <span className="bg-[#591f2a] text-[#fadada] font-bold py-1 px-3 rounded-lg">
           {product.price}
         </span>
       </div>
@@ -288,7 +288,7 @@ const CategorySelector = ({ categories, selectedCategory, onSelectCategory }) =>
           onClick={() => onSelectCategory(category.name)}
         >
         
-          <div className={`rounded-full p-4 mb-2 ${selectedCategory === category.name ? 'bg-[#ffa200]' : 'bg-[#8b7245]'}`}>
+          <div className={`rounded-full p-4 mb-2 ${selectedCategory === category.name ? 'bg-[#591f2a]' : 'bg-[#421820]'}`}>
             {category.icon}
           </div>
           <p>{category.name}</p>
