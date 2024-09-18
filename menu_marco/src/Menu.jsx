@@ -274,20 +274,23 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => (
 
 // Componente para seleccionar categoría
 const CategorySelector = ({ categories, selectedCategory, onSelectCategory }) => (
-  <div className="flex justify-center my-6">
-    {categories.map((category, index) => (
-      <div 
-        key={index} 
-        className="mx-3 text-center cursor-pointer" 
-        onClick={() => onSelectCategory(category.name)}
-      >
-        <div className={`rounded-full p-4 mb-2 ${selectedCategory === category.name ? 'bg-orange-200' : 'bg-gray-200'}`}>
-          {category.icon}
+  <div className="overflow-x-auto px-4">
+    <div className="flex justify-center space-x-4 my-6">
+      {categories.map((category, index) => (
+        <div 
+          key={index} 
+          className="text-center cursor-pointer" 
+          onClick={() => onSelectCategory(category.name)}
+        >
+          <div className={`rounded-full p-4 mb-2 ${selectedCategory === category.name ? 'bg-orange-200' : 'bg-gray-200'}`}>
+            {category.icon}
+          </div>
+          <p>{category.name}</p>
         </div>
-        <p>{category.name}</p>
-      </div>
-    ))}
+      ))}
+    </div>
   </div>
 );
+
 
 export default Menu;
