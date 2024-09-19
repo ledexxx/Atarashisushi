@@ -3,6 +3,8 @@ import { Search } from '@mui/icons-material';
 import { Restaurant, LocalDining, ShoppingBasket, EmojiFoodBeverage, Cake, Liquor} from '@mui/icons-material'; 
 import './App.css';
 import Logo from './logo';
+import Slider from "react-slick";
+import { FaFacebookF, FaInstagram, FaTiktok } from 'react-icons/fa';
 
 const Menu = () => {
   const categories = [
@@ -179,20 +181,16 @@ const Menu = () => {
     }
   ];
 
- 
-
-  // Filtrar productos por categoría y término de búsqueda
   const filteredProducts = products.filter(product => {
     const matchesCategory = selectedCategory === 'Todo' || product.category === selectedCategory;
-    const matchesSearchTerm = product.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                              product.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearchTerm = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearchTerm;
   });
 
-  // Agrupar productos por categoría para cuando seleccionamos 'Todo'
   const groupedProducts = products.reduce((groups, product) => {
-    if (product.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-        product.description.toLowerCase().includes(searchTerm.toLowerCase())) {
+    if (product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.description.toLowerCase().includes(searchTerm.toLowerCase())) {
       const category = product.category;
       if (!groups[category]) {
         groups[category] = [];
@@ -202,7 +200,6 @@ const Menu = () => {
     return groups;
   }, {});
 
-  // Función para renderizar los productos filtrados o agrupados
   const renderProducts = () => {
     if (selectedCategory === 'Todo') {
       return Object.keys(groupedProducts).map((category, index) => (
@@ -226,28 +223,91 @@ const Menu = () => {
     }
   };
 
+  // Configuración del slider
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
   return (
-    <div><Logo/> </div>,
-    <div className="container mx-auto px-4">
-     
-      <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      <CategorySelector categories={categories} selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory} />
-      {renderProducts()}
-    </div>
+    <>
+ <header className="flex justify-between items-center max-w-5xl mx-auto px-4 py-2 bg-transparent">
+  <div className="text-white cursor-pointer">
+    {/* Aquí puedes usar un icono de menú que prefieras */}
+    <Search className="text-[#591f2a]" fontSize="large" />
+  </div>
+  <div className="mx-auto">
+    <Logo />
+  </div>
+  <div className="text-white cursor-pointer">
+    <ShoppingBasket className="text-[#591f2a]" fontSize="large" />
+  </div>
+</header>
+
+
+
+      <div className="container mx-auto px-4">
+      <Slider {...settings}>
+  <div className="max-w-[70%] h-[250px] mx-auto rounded-lg overflow-hidden">
+    <img src="/slider1.jpeg" alt="slide1" className="w-full h-full object-cover" />
+  </div>
+  <div className="max-w-[70%] h-[200px] mx-auto rounded-lg overflow-hidden">
+    <img src="/slider2.jpeg" alt="slide2" className="w-full h-full object-cover" />
+  </div>
+  <div className="max-w-[70%] h-[200px] mx-auto rounded-lg overflow-hidden">
+    <img src="/slider3.jpeg" alt="slide3" className="w-full h-full object-cover" />
+  </div>
+</Slider>
+
+        
+        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        <CategorySelector categories={categories} selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory} />
+        {renderProducts()}
+      </div>
+
+      <footer className="bg-gray-900 rounded-lg shadow dark:bg-gray-900 m-8">
+        <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+          <div className="sm:flex sm:items-center sm:justify-between">
+            <a href="#" className="flex items-center mb-4 sm:mb-0">
+              <img src="/logosushi.svg" className="h-28" alt="sushi Logo" />
+              <span className="self-center text-2xl font-semibold whitespace-nowrap text-white"></span>
+            </a>
+            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-400 sm:mb-0">
+              <li className="mr-4 md:mr-6">
+                <a href="https://www.tiktok.com/@atarashisushi?lang=en" className="hover:text-[#591f2a]">
+                  <FaTiktok size={24} />
+                </a>
+              </li>
+              <li className="mr-4 md:mr-6">
+                <a href="https://m.facebook.com/atarashiisushi/albums/509553727840026/" className="hover:text-[#591f2a]">
+                  <FaFacebookF size={24} />
+                </a>
+              </li>
+              <li className="mr-4 md:mr-6">
+                <a href="https://www.instagram.com/atarashisushii/" className="hover:text-[#591f2a]">
+                  <FaInstagram size={24} />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+          <span className="block text-sm text-gray-400 sm:text-center">© 2024 <a href="#" className="hover:underline">Atarashi Sushi</a>. Todos los derechos reservados.</span>
+        </div>
+      </footer>
+    </>
   );
 };
 
-// Componente para mostrar el producto
 const ProductCard = ({ product }) => (
   <div className="flex items-center bg-[#0000] border-2 border-red-900 rounded-xl shadow-md overflow-hidden w-full">
-    {/* Imagen a la izquierda */}
     <div className="w-1/3">
       <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
     </div>
-    
-    {/* Contenido de texto a la derecha */}
     <div className="w-2/3 p-6">
-      <h2 className="text-xl text-left font-bold text-gray-900">{product.name}</h2>
+      <h2 className="text-xl text-left font-bold text-white">{product.name}</h2>
       <p className="text-white text-left">{product.description}</p>
       <div className="flex items-center mt-4">
         <ShoppingBasket className="text-[#591f2a] mr-2" />
@@ -259,9 +319,6 @@ const ProductCard = ({ product }) => (
   </div>
 );
 
-
-
-// Componente de barra de búsqueda
 const SearchBar = ({ searchTerm, setSearchTerm }) => (
   <div className="flex justify-center mt-10">
     <div className="relative w-full sm:w-3/4 lg:w-1/2">
@@ -270,14 +327,13 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => (
         placeholder="Buscar productos por nombre o descripción"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="w-full p-2 border border-gray-300 rounded-full focus:outline-none"
+        className="w-full p-2 bg-transparent border border-red-900 rounded-full focus:outline-none"
       />
-      <Search className="absolute right-4 top-3 text-gray-500" />
+      <Search className="absolute right-4 top-3 text-white" />
     </div>
   </div>
 );
 
-// Componente para seleccionar categoría
 const CategorySelector = ({ categories, selectedCategory, onSelectCategory }) => (
   <div className="overflow-x-auto px-4">
     <div className="flex justify-center space-x-4 my-6">
@@ -287,7 +343,6 @@ const CategorySelector = ({ categories, selectedCategory, onSelectCategory }) =>
           className="text-center cursor-pointer" 
           onClick={() => onSelectCategory(category.name)}
         >
-        
           <div className={`rounded-full p-4 mb-2 ${selectedCategory === category.name ? 'bg-[#591f2a]' : 'bg-[#421820]'}`}>
             {category.icon}
           </div>
@@ -297,6 +352,5 @@ const CategorySelector = ({ categories, selectedCategory, onSelectCategory }) =>
     </div>
   </div>
 );
-
 
 export default Menu;
