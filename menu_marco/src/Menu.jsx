@@ -402,16 +402,11 @@ const renderProducts = () => {
 
 return (
   <>
-    <header className="flex justify-between items-center max-w-5xl mx-auto px-4 py-2 bg-transparent">
-      <div className="text-white cursor-pointer">
-        <Search className="text-[#ff5f24]" fontSize="large" />
-      </div>
+    <header className="flex justify-between items-center max-w-5xl mx-auto px-4 py-6 bg-transparent">
       <div className="mx-auto">
         <Logo />
       </div>
-      <div className="text-white cursor-pointer">
-        <FaShoppingBasket className="text-[#ff5f24]" fontSize="large" />
-      </div>
+      
     </header>
 
     <div className="container mx-auto px-4">
@@ -482,14 +477,14 @@ return (
 };
 
 const SearchBar = ({ searchTerm, setSearchTerm }) => (
-<div className="flex justify-center mt-10">
+<div className="flex justify-center my-12">
   <div className="relative w-full sm:w-3/4 lg:w-1/2">
     <input
       type="text"
-      placeholder="Buscar productos por nombre o descripción"
+      placeholder="Buscar productos "
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
-      className="w-full p-2 bg-transparent border border-[#ff3a3a] rounded-full focus:outline-none"
+      className="w-full text-center p-2 bg-transparent border border-[#ff3a3a] rounded-full focus:outline-none"
     />
     <Search className="absolute right-4 top-3 text-white" />
   </div>
@@ -497,8 +492,8 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => (
 );
 
 const CategorySelector = ({ categories, selectedCategory, onSelectCategory }) => (
-  <div className="overflow-x-auto px-4">
-    <div className="flex space-x-6 my-6">
+  <div className="overflow-x-auto px-auto">
+    <div className="flex lg:justify-center space-x-6 my-6"> 
       {categories.map((category, index) => (
         <div key={index} className="text-center cursor-pointer" onClick={() => onSelectCategory(category.name)}>
           <div className={`rounded-full w-24 h-24 flex items-center justify-center mx-5 mb-2 border-4 ${selectedCategory === category.name ? 'border-[#ff5f24]' : 'border-[#ff3030]'}`}>
@@ -510,6 +505,7 @@ const CategorySelector = ({ categories, selectedCategory, onSelectCategory }) =>
     </div>
   </div>
 );
+
 
 
 export default Menu;
