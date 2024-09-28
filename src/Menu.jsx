@@ -265,14 +265,14 @@ const Menu = () => {
       name: "Handroll Pollo + Verdura a elección", 
       description: "Pollo y verdura a elección envuelto en panko o tempura", 
       price: "$4.490", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Handrolls Premium"
   },
   { 
       name: "Handroll Kanikama + Verdura a elección", 
       description: "Kanikama y verdura a elección envuelto en panko o tempura", 
       price: "$4.490", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Handrolls Premium"
   },
 
@@ -281,28 +281,28 @@ const Menu = () => {
       name: "Handroll Carne + Verdura a elección", 
       description: "Carne y verdura a elección envuelto en panko o tempura", 
       price: "$4.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Handrolls VIP"
   },
   { 
       name: "Handroll Cerdo + Verdura a elección", 
       description: "Cerdo y verdura a elección envuelto en panko o tempura", 
       price: "$4.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Handrolls VIP"
   },
   { 
       name: "Handroll Camarón + Verdura a elección", 
       description: "Camarón y verdura a elección envuelto en panko o tempura", 
       price: "$4.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Handrolls VIP"
   },
   { 
       name: "Handroll Salmón + Verdura a elección", 
       description: "Salmón y verdura a elección envuelto en panko o tempura", 
       price: "$4.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Handrolls VIP"
   },
       // Gohan
@@ -310,35 +310,35 @@ const Menu = () => {
       name: "Gohan Opción 1", 
       description: "Pollo apanado, arroz, queso, cebollín, palta", 
       price: "$4.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Gohan"
   },
   { 
       name: "Gohan Opción 2", 
       description: "Camarón apanado, arroz, queso, lechuga, cebollín, palta", 
       price: "$5.490", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Gohan"
   },
   { 
       name: "Gohan Opción 3", 
       description: "Salmón, arroz, queso, lechuga, cebollín, palta", 
       price: "$5.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Gohan"
   },
   { 
       name: "Gohan Opción 4", 
       description: "Arroz, queso, palta, lechuga, pimentón, aceituna, choclo, cebollín", 
       price: "$4.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Gohan"
   },
   { 
       name: "Gohan Opción 5", 
       description: "Camarón, salmón, arroz, lechuga, palta, queso", 
       price: "$6.490", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Gohan"
   },
    
@@ -349,14 +349,14 @@ const Menu = () => {
     name: 'Fanta', 
     description: 'Bebida de fantasía sabor naranja', 
     price: '$2.500', 
-    image: '/icono.png',
+    image: '/icono.jpg',
     category: 'Bebidas'
   },
   { 
     name: 'Limonada de Coco', 
     description: 'Bebida refrescante a base de limón y leche de coco', 
     price: '$3.800', 
-    image: '/icono.png',
+    image: '/icono.jpg',
     category: 'Bebidas'
   },
 ];
