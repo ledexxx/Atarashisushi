@@ -33,14 +33,14 @@ const Menu = () => {
   }, [isModalOpen]);
 
   const categories = [
-    { name: 'Todo', image: '/icono.png' },
+    { name: 'Todo', image: '/icono.jpg' },
     { name: 'Promociones', image: '/promos.jpg' },
     { name: 'Sin Arroz', image: '/sin_arroz.png' },
     { name: 'Handrolls Clásicos', image: '/handrolls.png' },
     { name: 'Sushi Burgers', image: '/sushiburger.png' },
     { name: 'Gohan', image: '/GOHAN.png' },
     { name: 'Niños', image: '/NINOS.jpg' },
-    { name: 'Bebidas', image: '/icono.png' },
+    { name: 'Bebidas', image: '/icono.jpg' },
   ];
 
   const [selectedCategory, setSelectedCategory] = useState('Todo');
@@ -54,42 +54,42 @@ const Menu = () => {
       name: "Sushi Promo 20 cortes", 
       description: "Incluye 1 roll frío, 2 calientes y 1 premium", 
       price: "$10.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Promociones"
   },
   { 
       name: "Sushi Promo 30 cortes", 
       description: "Incluye 1 roll frío, 3 calientes y 1 premium", 
       price: "$12.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Promociones"
   },
   { 
       name: "Sushi Promo 40 cortes", 
       description: "Incluye 2 rolls fríos, 3 calientes y 1 premium", 
       price: "$14.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Promociones"
   },
   { 
       name: "Sushi Promo 50 cortes", 
       description: "Incluye 2 rolls fríos, 4 calientes y 1 premium", 
       price: "$16.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Promociones"
   },
   { 
       name: "Sushi Promo 60 cortes", 
       description: "Incluye 2 rolls fríos, 4 calientes y 1 premium", 
       price: "$18.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Promociones"
   },
   { 
       name: "Sushi Promo 70 cortes", 
       description: "Incluye 2 rolls fríos, 5 calientes y 1 premium", 
       price: "$20.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Promociones"
   },
       // Sin Arroz
@@ -97,28 +97,28 @@ const Menu = () => {
         name: 'Promo Sin Arroz 16 cortes',
         description: '1 rolls caliente, 1 rolls premium',
         price: '$10.990',
-        image: '/icono.png',
+        image: '/icono.jpg',
         category: 'Sin Arroz'
       },
       {
         name: 'Promo Sin Arroz 24 cortes',
         description: '2 rolls caliente, 1 rolls premium',
         price: '$13.990',
-        image: '/icono.png',
+        image: '/icono.jpg',
         category: 'Sin Arroz'
       },
       {
         name: 'Promo Sin Arroz 32 cortes',
         description: '2 rolls caliente, 1 rolls premium, 1 rolls nori',
         price: '$16.990',
-        image: '/icono.png',
+        image: '/icono.jpg',
         category: 'Sin Arroz'
       },
       {
         name: 'Promo Sin Arroz 40 cortes',
         description: '3 rolls caliente, 1 rolls premium, 1 rolls nori',
         price: '$19.990',
-        image: '/icono.png',
+        image: '/icono.jpg',
         category: 'Sin Arroz'
       },
   // Sushi Rolls
@@ -127,63 +127,63 @@ const Menu = () => {
     name: 'Sushi California', 
     description: 'Salmón, aguacate, y queso crema', 
     price: '$8.800', 
-    image: '/icono.png',
+    image: '/icono.jpg',
     category: 'Sushi Rolls'
   },
   { 
     name: 'Sushi Dragon', 
     description: 'Langostino, aguacate y teriyaki', 
     price: '$13.800', 
-    image: '/icono.png',
+    image: '/icono.jpg',
     category: 'Sushi Rolls'
   },
   { 
     name: 'Sushi Philadelphia', 
     description: 'Salmón, queso crema, y pepino', 
     price: '$9.500', 
-    image: '/icono.png',
+    image: '/icono.jpg',
     category: 'Sushi Rolls'
   },
   { 
     name: 'Sushi Spicy Tuna', 
     description: 'Atún picante, mayonesa sriracha, cebolla crujiente', 
     price: '$11.300', 
-    image: '/icono.png',
+    image: '/icono.jpg',
     category: 'Sushi Rolls'
   },
   { 
     name: 'Sushi Ebi Tempura', 
     description: 'Langostino tempura, aguacate, y sésamo', 
     price: '$12.600', 
-    image: '/icono.png',
+    image: '/icono.jpg',
     category: 'Sushi Rolls'
   },
   { 
     name: 'Sushi Rainbow', 
     description: 'Roll variado con salmón, atún, aguacate y cangrejo', 
     price: '$14.200', 
-    image: '/icono.png',
+    image: '/icono.jpg',
     category: 'Sushi Rolls'
   },
   { 
     name: 'Sushi Unagi Roll', 
     description: 'Anguila a la parrilla, salsa teriyaki, pepino', 
     price: '$15.000', 
-    image: '/icono.png',
+    image: '/icono.jpg',
     category: 'Sushi Rolls' 
   },
   { 
     name: 'Sushi Veggie Roll', 
     description: 'Aguacate, pepino, zanahoria, y espinaca', 
     price: '$7.500', 
-    image: '/icono.png',
+    image: '/icono.jpg',
     category: 'Sushi Rolls'
   },
   { 
     name: 'Sushi Volcano', 
     description: 'Roll de atún con topping de mariscos picantes', 
     price: '$16.500', 
-    image: '/icono.png',
+    image: '/icono.jpg',
     category: 'Sushi Rolls'
   },
     // Menú de Niños
@@ -191,14 +191,14 @@ const Menu = () => {
     name: "Nuggets con Papas", 
     description: "Nuggets de pollo acompañados con papas fritas", 
     price: "$4.990", 
-    image: "/icono.png",
+    image: "/icono.jpg",
     category: "Niños"
 },
 { 
     name: "Tiritas con Papas", 
     description: "Tiritas de pollo acompañadas con papas fritas", 
     price: "$5.990", 
-    image: "/icono.png",
+    image: "/icono.jpg",
     category: "Niños"
 },
  // Sushi Burgers
@@ -206,28 +206,28 @@ const Menu = () => {
   name: "Sushi Burger Opción Pollo", 
   description: "Pollo apanado, lechuga, palta, cebollín, queso crema o queso amarillo", 
   price: "$5.990", 
-  image: "/icono.png",
+  image: "/icono.jpg",
   category: "Sushi Burgers"
 },
 { 
   name: "Sushi Burger Opción Carne", 
   description: "Carne de vacuno, lechuga, cebollín, pimentón, queso crema o queso amarillo", 
   price: "$6.590", 
-  image: "/icono.png",
+  image: "/icono.jpg",
   category: "Sushi Burgers"
 },
 { 
   name: "Sushi Burger Opción Camarón", 
   description: "Camarón apanado, lechuga, palta, cebollín, queso crema o queso amarillo", 
   price: "$7.490", 
-  image: "/icono.png",
+  image: "/icono.jpg",
   category: "Sushi Burgers"
 },
 { 
   name: "Sushi Burger Opción Veggie", 
   description: "Verduras seleccionadas, queso crema o queso amarillo", 
   price: "$5.990", 
-  image: "/icono.png",
+  image: "/icono.jpg",
   category: "Sushi Burgers"
 },
       // Handrolls Clásicos
@@ -235,28 +235,28 @@ const Menu = () => {
       name: "Handroll Pollo Cebollín", 
       description: "Pollo con cebollín envuelto en panko o tempura", 
       price: "$3.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Handrolls Clásicos"
   },
   { 
       name: "Handroll Pollo Aceituna", 
       description: "Pollo con aceituna envuelto en panko o tempura", 
       price: "$3.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Handrolls Clásicos"
   },
   { 
       name: "Handroll Kanikama Cebollín", 
       description: "Kanikama con cebollín envuelto en panko o tempura", 
       price: "$3.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Handrolls Clásicos"
   },
   { 
       name: "Handroll Kanikama Aceituna", 
       description: "Kanikama con aceituna envuelto en panko o tempura", 
       price: "$3.990", 
-      image: "/icono.png",
+      image: "/icono.jpg",
       category: "Handrolls Clásicos"
   },
 
