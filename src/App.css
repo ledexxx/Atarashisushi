@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+::-webkit-scrollbar {
+  height: 5px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff5f24; /* Color de la barra del scrollbar */
+  border-radius: 9px; /* Radio de borde para dar aspecto redondeado */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff3a3a; /* Color al pasar el cursor */
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e38; /* Color del fondo del scrollbar */
+}
+
